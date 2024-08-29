@@ -1,30 +1,39 @@
 class Solution {
 public:
-    int countStudents(vector<int>& Stu, vector<int>& Sw) {
-        queue<int> StuQ;
+    int countStudents(vector<int>& stu, vector<int>& sw) {
+        queue<int>stuQ;
         stack<int>sandS;
-        for(int s:Stu){
-            StuQ.push(s);
+        for(int s:stu){
+            stuQ.push(s);
         }
-        for(int i=Sw.size()-1;i>=0;i--){
-            sandS.push(Sw[i]);
+        for(int i=sw.size()-1;i>=0;i--){
+            sandS.push(sw[i]);
         }
         int cnt=0;
-        int n=Stu.size();
-        while(!StuQ.empty() && !sandS.empty()){
-            if(StuQ.front()==sandS.top()){
-                StuQ.pop();
+        int n=stu.size();
+        while(!stuQ.empty()&&!sandS.empty()){
+            if(stuQ.front()==sandS.top()){
+                stuQ.pop();
                 sandS.pop();
                 cnt=0;
             }else{
-                StuQ.push(StuQ.front());
-                StuQ.pop();
+                stuQ.push(stuQ.front());
+                    stuQ.pop();
                 cnt++;
             }
-            if(cnt==n){
+        
+        if(cnt==n){
             break;
         }
         }
-        return StuQ.size();
-    }
+        return stuQ.size();
+        
+        
+        
+        
+        
+        
+        
+        
+    }
 };
