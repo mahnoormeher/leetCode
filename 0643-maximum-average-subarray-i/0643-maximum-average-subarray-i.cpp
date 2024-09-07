@@ -9,16 +9,15 @@ public:
             if(r-l<k){
                 windowsum+=nums[r];
                 r++;
-            }
-            else if(r-l==k){
-                ans=max(ans,windowsum);
+            }else if(r-l==k){
+                ans=max(windowsum,ans);
                 windowsum+=nums[r];
                 r++;
                 windowsum-=nums[l];
                 l++;
             }
         }
-        ans=max(ans,windowsum);
+        ans=max(windowsum,ans);
         return (double)ans/k;
     }
 };
