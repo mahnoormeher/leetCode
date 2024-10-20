@@ -2,10 +2,10 @@ class Solution {
 public:
     bool canPartitionKSubsets(vector<int>& nums, int k) {
         int totalsum=accumulate(nums.begin(),nums.end(),0);
-        if(totalsum%k!=0){
+        if(totalsum%4!=0){
             return false;
         }
-        int targetsum=totalsum/k;
+        int targetsum=totalsum/4;
         if(targetsum<nums[0]){
             return false;
         }
