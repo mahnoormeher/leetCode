@@ -26,14 +26,7 @@ public:
             break;
         }
         }
-        return stuQ.size();
-        
-        
-        
-        
-        
-        
-        
+        return stuQ.size();  
         
     }
 };
