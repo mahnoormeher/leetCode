@@ -17,7 +17,7 @@ public:
             t1=t1->next;
             t2=t2->next;
             if(t1==t2)
-                return t2; //we can also return t1
+                return t2; 
         if(t1==NULL)
             t1=headB;
         if(t2==NULL)
